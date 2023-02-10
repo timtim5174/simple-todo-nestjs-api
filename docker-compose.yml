@@ -1,0 +1,25 @@
+# Disclaimer:
+# Credentials etc. are just for localhost purpose
+# In a real setup environment credentials shouldn't be committed and should be replaced with environment variables
+
+version: '3'
+services:
+  postgres:
+    image: postgres
+    hostname: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: todo
+
+  pgadmin:
+    image: dpage/pgadmin4
+    depends_on:
+      - postgres
+    ports:
+      - 5555:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: todo@admin.de
+      PGADMIN_DEFAULT_PASSWORD: admin

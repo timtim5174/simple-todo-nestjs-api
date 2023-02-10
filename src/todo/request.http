@@ -1,0 +1,29 @@
+POST http://localhost:3000/todo
+Authorization: Bearer YOUR_JWT_TOKEN
+content-type: application/json
+
+{
+  "text": "My task"
+}
+
+
+######
+GET http://localhost:3000/todo
+Authorization: Bearer YOUR_JWT_TOKEN
+content-type: application/json
+
+
+######
+PATCH http://localhost:3000/todo/1
+Authorization: Bearer YOUR_JWT_TOKEN
+content-type: application/json
+
+{
+  "text": "Changed text of task",
+  "isCompleted": true
+}
+
+######
+DELETE http://localhost:3000/todo/1
+Authorization: Bearer YOUR_JWT_TOKEN
+content-type: application/json

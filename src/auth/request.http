@@ -1,0 +1,18 @@
+### Create a new user
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+  "email": "test@test.de",
+  "password": "password"
+}
+
+### Login a user
+POST http://localhost:3000/auth/login
+content-type: application/json
+
+{
+  "email": "test@test.de",
+  "password": "password"
+}
+
